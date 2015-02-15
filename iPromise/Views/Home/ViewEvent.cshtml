@@ -1,0 +1,27 @@
+﻿@model iPromise.Models.ViewEventModel
+
+@{
+    ViewBag.Title = "View Event";
+}
+
+<h2>View Event</h2>
+<ul>
+    <li>@Model.event_name</li>
+    <li>@Model.event_description</li>
+    <li>@Model.event_location</li>
+    <li>@Model.event_date</li>
+</ul>
+
+  
+
+@using (Html.BeginForm("PostQuestion", "Home", new { id = Model.event_id }))
+{
+     @Html.ValidationSummary()
+   <fieldset>
+        <legend>Event</legend>
+        Question
+                @Html.TextAreaFor(m => m.question)
+         
+        <input type="submit" value="Post" />
+    </fieldset>
+}

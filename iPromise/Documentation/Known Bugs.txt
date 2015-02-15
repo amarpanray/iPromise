@@ -1,0 +1,3 @@
+﻿Where	What	When
+Create	Event Page needs to be re-styled	5/31/2014
+Create	Event Description TextArea does not get highlighted on Model.IsValid = false;	5/31/2014

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - iPromise - Create, Collaborate and Share in Complete Privacy</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/Content/themes/base/css")  
+        @Scripts.Render("~/bundles/jquery")    
+
+         @* @Scripts.Render("~/bundles/jqueryui")   
+         @Scripts.Render("~/bundles/jqueryval")     
+        @Scripts.Render("~/bundles/modernizr")*@
+
+           <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>         
+           <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     @*   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+      @*  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> *@         
+       
+       
+          
+    </head>
+        <body>
+      
+            <div class="container">              
+                    @RenderBody()               
+            </div>
+        </body>
+</html>

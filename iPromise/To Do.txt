@@ -1,0 +1,10 @@
+﻿Make Name a required field
+
+Implement Bootstrap time field
+
+Implement jQuery Calendar/ make date field read only - Only use calendar.
+
+Validate fields on Create form/alter jquery to keep modal open upon failure
+Place whole page in container class= container?
+
+Set container width globally in CSS

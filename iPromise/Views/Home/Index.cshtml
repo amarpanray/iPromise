@@ -1,0 +1,50 @@
+﻿@model iPromise.Models.EventModel 
+<table>
+<thead>
+<tr>
+    <td><strong>Events</strong></td><td><strong>Created on</strong></td>
+</tr>
+</thead>
+@if(Model._events.Count > 0)
+    {
+        foreach (var ev in Model._events.OrderByDescending(m => m.DateCreated).ToList())
+        { 
+         <tr><td>@ev.Name</td><td>@ev.DateCreated</td></tr>    
+        }
+    }
+else
+    {
+     <tr><td colspan="2">There are no Events created yet. Click on Create Event to get started</td></tr>    
+    }
+</table>
+
+<div id="create-event-dialog" title="Create Event">
+@using (Html.BeginForm("CreateEvent", "Home", FormMethod.Post,new { id = "createForm" }))
+{
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Description)
+                @Html.TextAreaFor(m => m.Description)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Location)
+                @Html.TextBoxFor(m => m.Location)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Date)
+                @Html.TextBoxFor(m => m.Date)
+            </li>
+
+             <li>
+                @Html.LabelFor(m => m.Time)
+                @Html.TextBoxFor(m => m.Time)
+            </li>
+        </ol>
+      @Html.ValidationSummary()
+     
+}
+</div>
